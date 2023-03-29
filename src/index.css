@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  min-height: 100vh;
+  font-family: Poppins, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  background-image: radial-gradient(ellipse at top right, #d474e7, #8cb3df);
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  color: #e8e0f8;
+}
+
+
