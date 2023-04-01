@@ -1,7 +1,8 @@
 import Note from "./Note";
 import classes from "./NotesList.module.css";
+import AddNote from "./AddNote";
 
-function NotesList(){
+function NotesList(props){
 
     const notes = [
         { name: "Simon", content: "Lorem ipsum dolor sit amet"},
@@ -11,11 +12,15 @@ function NotesList(){
     ];
 
     return(
+        <>
+        { props.newNote ? <AddNote/> : null }
+        
         <ul className={classes.notes}>
             {notes.map((note) => (
                 <Note name={note.name} content={note.content}/>
             ))}
         </ul>
+        </>
     );
 }
 
