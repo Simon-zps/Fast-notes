@@ -1,0 +1,13 @@
+
+.notes {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

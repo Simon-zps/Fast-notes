@@ -13,8 +13,37 @@
 
 body {
   margin: 0;
-  text-align: center;
   color: #e8e0f8;
 }
 
+.header{
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  text-shadow: #000000;
+  line-height: 1.68rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
+#addNote {
+  color: #252525;
+  padding: 10px;
+  margin: auto 0;
+  height: 50%;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  line-height: 1.68rem;
+  box-shadow: 2px 2px rgb(153, 153, 153);
+}
+#addNote:hover{
+  background-color: #ebeaea;
+  color: #333;
+}

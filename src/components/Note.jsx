@@ -1,10 +1,12 @@
+import classes from './Note.module.css';
 
-function Note() {
+function Note(props) {
 
     return (
-    <div>
-        <p>SuperNote</p>
-    </div>
+    <li className={classes.note}>
+        <h3>{props.name}</h3>
+        <p>{props.content}</p>
+    </li>
     );
 }
 
