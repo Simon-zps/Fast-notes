@@ -6,8 +6,7 @@ function App() {
 
   const [newNote, setNewNote] = useState(false);
 
-
-  function handleAddNote(){
+  function displayAddNote(){
      if(newNote === false){
         setNewNote(true);
       } else {
@@ -20,12 +19,12 @@ function App() {
     <div className="header">
       <h3>FAST <br/>NOTES</h3>
 
-      <div className="addNote" onClick={handleAddNote} >
+      <div className="addNote" onClick={displayAddNote} >
         <img src="images/post-icon.png" alt="Post icon"/>
       </div>
       
     </div>
-    <NotesList newNote={newNote} />
+    <NotesList newNote={newNote} displayAddNote={displayAddNote}/>
   </>
   );
 }

@@ -1,10 +1,22 @@
 import classes from './AddNote.module.css';
 
-function AddNote() {
+function AddNote(props) {
+  // Make it centered and over page
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const note = {
+      name: e.target.elements["name-input"].value,
+      content: e.target.elements["text-input"].value
+    }
+
+    props.addNote(note);
+  }
+
   return (
-        <form className={classes.form}>
+        <form className={classes.form} onSubmit={handleSubmit}>
             <label htmlFor="text-input">Note:</label>
-            <textarea id="text-input" name="text-input" required></textarea><br/>
+            <textarea id="text-input" name="text-input" required ></textarea><br/>
 
             
             <label htmlFor="name-input">Author:</label>
