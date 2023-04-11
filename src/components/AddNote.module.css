@@ -1,4 +1,48 @@
 .form{
+    background-image: radial-gradient(ellipse at top right, #d474e7, #8cb3df);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 100;
+
     width: 20%;
     margin: 0 auto;
+    padding:1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.2, 0.2);  
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
 }
+
+textarea, input[type="text"] {
+    padding: 0.5rem;
+    background-color: #decfe7;
+    border: none;
+    border-radius: 2%;
+}
+textarea:focus, input[type="text"]:focus {
+    outline: none;
+    background-color: #cdbed6;
+  }
+  
+.buttons {
+    margin: 0 auto;
+}
+
+input[type="button"], input[type="submit"] {
+    padding:0.3rem;
+    margin-right: 1rem;
+    border-radius: 0.2rem;
+    color: #6d6d6d;
+    font-weight: bold;
+    border: none;
+}
+
+
+input[type="button"]:hover, input[type="submit"]:hover{
+    background-color: #dadada;
+    cursor: pointer;
+}  

@@ -19,7 +19,7 @@ function NotesList(props){
 
     return(
         <>
-        { props.newNote ? <AddNote addNote={handleNewNote}/> : null }
+        { props.newNote ? <AddNote addNote={handleNewNote} cancelNote={props.displayAddNote}/> : null }
         
         <ul className={classes.notes}>
             {notes.map((note) => (

@@ -16,14 +16,16 @@ function AddNote(props) {
   return (
         <form className={classes.form} onSubmit={handleSubmit}>
             <label htmlFor="text-input">Note:</label>
-            <textarea id="text-input" name="text-input" required ></textarea><br/>
+            <textarea id="text-input" name="text-input" required rows={4}></textarea><br/>
 
             
             <label htmlFor="name-input">Author:</label>
             <input type="text" id="name-input" name="name-input" required/><br/>
             
-            <input type="button" value="Cancel"/>
-            <input type="submit" value="Submit"/>
+            <div className={classes.buttons}>
+              <input type="button" value="Cancel" onClick={props.cancelNote}/>
+              <input type="submit" value="Submit"/>
+            </div>
             
         </form>
   );
