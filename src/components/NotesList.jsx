@@ -15,15 +15,15 @@ function NotesList(props){
 
     function handleNewNote(note) {
         setNotes(prevNotes => [...prevNotes, note]);
-        props.displayAddNote();
+        props.displayUserForm();
     }
 
     return(
         <>
-        { props.newNote ? 
+        { props.formVisible ? 
 
-        <Modal>
-            <AddNote addNote={handleNewNote} cancelNote={props.displayAddNote}/> 
+        <Modal displayUserForm={props.displayUserForm}>
+            <AddNote addNote={handleNewNote} displayUserForm={props.displayUserForm}/> 
         </Modal>
         : null }
         

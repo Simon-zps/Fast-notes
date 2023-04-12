@@ -23,7 +23,7 @@ function AddNote(props) {
             <input type="text" id="name-input" name="name-input" required/><br/>
             
             <div className={classes.buttons}>
-              <input type="button" value="Cancel" onClick={props.cancelNote}/>
+              <input type="button" value="Cancel" onClick={props.displayUserForm}/>
               <input type="submit" value="Submit"/>
             </div>
             

@@ -4,14 +4,14 @@ import { useState } from 'react';
 
 function App() {
 
-  const [newNote, setNewNote] = useState(false);
+  const [formVisible, setFormVisible] = useState(false);
 
-  function displayAddNote() {
+  function displayUserForm() {
 
-    if (newNote === false) {
-        setNewNote(true);
+    if (formVisible === false) {
+        setFormVisible(true);
     } else {
-        setNewNote(false);
+        setFormVisible(false);
     }
   }
   
@@ -21,12 +21,12 @@ function App() {
     <div className="header">
       <h3>FAST <br/>NOTES</h3>
 
-      <div className="addNote" onClick={displayAddNote} >
+      <div className="addNote" onClick={displayUserForm} >
         <img src="images/post-icon.png" alt="Post icon"/>
       </div>
       
     </div>
-    <NotesList newNote={newNote} displayAddNote={displayAddNote}/>
+    <NotesList formVisible={formVisible} displayUserForm={displayUserForm}/>
   </>
   );
 }
