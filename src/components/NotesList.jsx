@@ -2,6 +2,7 @@ import Note from "./Note";
 import classes from "./NotesList.module.css";
 import AddNote from "./AddNote";
 import { useState } from "react";
+import Modal from "./Modal";
 
 function NotesList(props){
 
@@ -19,7 +20,12 @@ function NotesList(props){
 
     return(
         <>
-        { props.newNote ? <AddNote addNote={handleNewNote} cancelNote={props.displayAddNote}/> : null }
+        { props.newNote ? 
+
+        <Modal>
+            <AddNote addNote={handleNewNote} cancelNote={props.displayAddNote}/> 
+        </Modal>
+        : null }
         
         <ul className={classes.notes}>
             {notes.map((note) => (
