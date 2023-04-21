@@ -1,7 +1,7 @@
 .form{
     background-image: radial-gradient(ellipse at top right, #d474e7, #8cb3df);
     padding: 1rem;
-    color: #fff;
+    color: #dadada;
     display: flex;
     flex-direction: column;
 }
@@ -22,18 +22,28 @@ textarea:focus, input[type="text"]:focus {
 .buttons {
     margin: 0 auto;
 }
-
-input[type="button"], input[type="submit"] {
+input[type="submit"], input[type="button"] {
     padding:0.3rem;
     margin-right: 1rem;
     border-radius: 0.2rem;
-    color: #401e7e;
+    color: #dadada;
     font-weight: bold;
     border: none;
 }
+input[type="submit"] {
+    background-color: #b761c9;
+}
+input[type="button"]{
+    background-color: transparent;
+}
 
+input[type="button"]:hover{
+    color: #fff;
+    cursor: pointer;
+}
 
-input[type="button"]:hover, input[type="submit"]:hover{
+input[type="submit"]:hover{
     background-color: #dadada;
+    color: #b761c9;
     cursor: pointer;
 }  

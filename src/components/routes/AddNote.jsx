@@ -1,4 +1,6 @@
 import classes from './AddNote.module.css';
+import Modal from '../Modal';
+import { Link } from 'react-router-dom';
 
 function AddNote(props) {
   // Make it centered and over page
@@ -14,6 +16,7 @@ function AddNote(props) {
   }
 
   return (
+    <Modal>
         <form className={classes.form} onSubmit={handleSubmit}>
             <label htmlFor="text-input">Note:</label>
             <textarea id="text-input" name="text-input" required rows={4}></textarea><br/>
@@ -23,11 +26,12 @@ function AddNote(props) {
             <input type="text" id="name-input" name="name-input" required/><br/>
             
             <div className={classes.buttons}>
-              <input type="button" value="Cancel" onClick={props.displayUserForm}/>
+              <Link to="/"><input type="button" value="Cancel" onClick={props.displayUserForm}/></Link>
               <input type="submit" value="Submit"/>
             </div>
             
         </form>
+    </Modal>
   );
 }
 
