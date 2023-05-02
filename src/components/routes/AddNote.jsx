@@ -30,13 +30,11 @@ export async function action({request}){
   const formData = await request.formData();
   const noteData = Object.fromEntries(formData);
 
-  fetch('http://localhost:8080/posts',{
+  await fetch('http://localhost:8080/posts',{ // using await we'll get the notes updated properly and not have to refresh the page
     method: 'POST',
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(noteData)
-}).then(() => {
-    console.log('New note added');
-})
+  })
 
   return redirect('/');
   //setNotes(prevNotes => [...prevNotes, note]);

@@ -5,7 +5,6 @@ import { useLoaderData } from 'react-router-dom';
 function NotesList(){
     const notes = useLoaderData();
 
-
     return(
         <>
         { notes.length === 0 && ( 
@@ -18,7 +17,7 @@ function NotesList(){
         { notes.length > 0 && (
         <ul className={classes.notes}>
             {notes.map((note) => (
-                <Note name={note.name} content={note.content}/>
+                <Note name={note.name} content={note.content} id={note.id} />
             ))}
         </ul>
         )}

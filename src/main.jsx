@@ -7,6 +7,8 @@ import RootLayout from './components/routes/RootLayout';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { action as newNoteAction } from './components/routes/AddNote';
 import { loader as notesUpdating } from './components/routes/App';
+import NoteOverlay from './components/routes/NoteOverlay';
+import { loader as noteOverlayLoader } from './components/routes/NoteOverlay';
 
 const router = createBrowserRouter([
   { 
@@ -19,6 +21,7 @@ const router = createBrowserRouter([
       loader: notesUpdating,
       children: [
         { path: '/form', element: <AddNote />, action: newNoteAction },
+        { path: '/:id', element: <NoteOverlay/>, loader: noteOverlayLoader },
     ] 
     },
   ] 
