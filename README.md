@@ -20,7 +20,7 @@
 
 1. Clone the repository: 
     ```
-    git clone https://github.com/username/repository.git
+    git clone https://github.com/Simon-zps/Fast-notes.git
     ```
 2. Navigate to the cloned repository: 
     ```
