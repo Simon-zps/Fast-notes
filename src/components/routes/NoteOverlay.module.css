@@ -1,3 +1,21 @@
 .noteInfo{
     padding: 1rem;
+    position: relative;
+}
+
+.noteButtons{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+}
+
+.noteButtons:hover{
+    cursor: pointer;
+}
+
+.editImg{
+    margin-right: 0.5rem;
+}
+.noteButtons img {
+    max-width: 1.5rem;
 }
